@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plakidas Auto | Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding-top: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+            .gallery-grid img {
+                width: 300px;
+                height: auto;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#ix">Αυτοκίνητα Ι.Χ.</a></li>
+                <li><a href="#moto">Μοτοσυκλέτες</a></li>
+                <li><a href="#pro">Επαγγελματικά οχήματα</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="ix">
+        <h2>Αυτοκίνητα Ι.Χ.</h2>
+        <div class="gallery-grid">
+            <img src="car1.jpg" alt="Ι.Χ. 1">
+            <img src="car2.jpg" alt="Ι.Χ. 2">
+            <img src="car3.jpg" alt="Ι.Χ. 3">
+        </div>
+    </section>
+
+    <section id="moto">
+        <h2>Μοτοσυκλέτες</h2>
+        <div class="gallery-grid">
+            <img src="moto1.jpg" alt="Μοτοσυκλέτα 1">
+            <img src="moto2.jpg" alt="Μοτοσυκλέτα 2">
+        </div>
+    </section>
+
+    <section id="pro">
+        <h2>Επαγγελματικά οχήματα</h2>
+        <div class="gallery-grid">
+            <img src="pro1.jpg" alt="Επαγγελματικό 1">
+            <img src="pro2.jpg" alt="Επαγγελματικό 2">
+        </div>
+    </section>
+
+</body>
+</html>
