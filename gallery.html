@@ -54,9 +54,77 @@
 
             .gallery-grid img {
                 width: 300px;
-                height: auto;
+                height: 200px;
+                object-fit: cover;
                 border-radius: 5px;
+                cursor: pointer;
+                transition: transform 0.2s;
             }
+
+                .gallery-grid img:hover {
+                    transform: scale(1.05);
+                }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .lightbox:target {
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 45px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .nav-arrow:hover {
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -74,27 +142,77 @@
     <section id="ix">
         <h2>Αυτοκίνητα Ι.Χ.</h2>
         <div class="gallery-grid">
-            <img src="car1.jpg" alt="Ι.Χ. 1">
-            <img src="car2.jpg" alt="Ι.Χ. 2">
-            <img src="car3.jpg" alt="Ι.Χ. 3">
+            <a href="#img1"><img src="img3.webp" alt="Ι.Χ. 1"></a>
+            <a href="#img2"><img src="jpeg2.webp" alt="Ι.Χ. 2"></a>
+            <a href="#img3"><img src="bumper1.webp" alt="Ι.Χ. 3"></a>
         </div>
     </section>
 
     <section id="moto">
         <h2>Μοτοσυκλέτες</h2>
         <div class="gallery-grid">
-            <img src="moto1.jpg" alt="Μοτοσυκλέτα 1">
-            <img src="moto2.jpg" alt="Μοτοσυκλέτα 2">
+            <a href="#img4"><img src="moto1.jpg" alt="Μοτοσυκλέτα 1"></a>
+            <a href="#img5"><img src="moto2.jpg" alt="Μοτοσυκλέτα 2"></a>
         </div>
     </section>
 
     <section id="pro">
         <h2>Επαγγελματικά οχήματα</h2>
         <div class="gallery-grid">
-            <img src="pro1.jpg" alt="Επαγγελματικό 1">
-            <img src="pro2.jpg" alt="Επαγγελματικό 2">
+            <a href="#img6"><img src="pro1.jpg" alt="Επαγγελματικό 1"></a>
+            <a href="#img7"><img src="pro2.jpg" alt="Επαγγελματικό 2"></a>
         </div>
     </section>
+
+    <!-- Lightboxes with navigation -->
+    <div id="img1" class="lightbox">
+        <a href="#img7" class="nav-arrow prev">&#10094;</a>
+        <a href="#img2" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="img3.webp">
+    </div>
+
+    <div id="img2" class="lightbox">
+        <a href="#img1" class="nav-arrow prev">&#10094;</a>
+        <a href="#img3" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="jpeg2.webp">
+    </div>
+
+    <div id="img3" class="lightbox">
+        <a href="#img2" class="nav-arrow prev">&#10094;</a>
+        <a href="#img4" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="bumper1.webp">
+    </div>
+
+    <div id="img4" class="lightbox">
+        <a href="#img3" class="nav-arrow prev">&#10094;</a>
+        <a href="#img5" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="moto1.jpg">
+    </div>
+
+    <div id="img5" class="lightbox">
+        <a href="#img4" class="nav-arrow prev">&#10094;</a>
+        <a href="#img6" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="moto2.jpg">
+    </div>
+
+    <div id="img6" class="lightbox">
+        <a href="#img5" class="nav-arrow prev">&#10094;</a>
+        <a href="#img7" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="pro1.jpg">
+    </div>
+
+    <div id="img7" class="lightbox">
+        <a href="#img6" class="nav-arrow prev">&#10094;</a>
+        <a href="#img1" class="nav-arrow next">&#10095;</a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="pro2.jpg">
+    </div>
 
 </body>
 </html>
