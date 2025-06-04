@@ -324,7 +324,7 @@
             <a href="#img5"><img src="moto1.webp" alt="Μοτοσυκλέτα 1"></a>
             <a href="#img6"><img src="moto2.webp" alt="Μοτοσυκλέτα 2"></a>
             <a href="#img7"><img src="moto3.webp" alt="Μοτοσυκλέτα 3"></a>
-            <a href="#img8"><img  src="moto4.webp" alt=" Μοτοσυκλέτα 4"</a>
+            <a href="#img8"><img src="moto4.webp" alt=" Μοτοσυκλέτα 4"</a>
         </div>
     </section>
 
@@ -399,17 +399,34 @@
         <img class="lightbox-content" src="pro2.webp">
     </div>
     <div id="img11" class="lightbox">
-         <a href="#img10"class=" nav-arrow prev">&#10094;</a>
-         <a href="#img1" class="nav-arrow next">&#10095; </a>
-         <a href="#" class="close">&times;</a>
-          <img class="lightbox-content" src="pro3.webp" />
+        <a href="#img10" class=" nav-arrow prev">&#10094;</a>
+        <a href="#img1" class="nav-arrow next">&#10095; </a>
+        <a href="#" class="close">&times;</a>
+        <img class="lightbox-content" src="pro3.webp" />
     </div>
 
     <script>
-function toggleMenu() {
-    var menu = document.getElementById('mobileMenu');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-}
+        function toggleMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+    <script>
+        document.addEventListener('keydown', evt => {
+            if (!location.hash.startsWith('#img')) return;
+            const lb = document.querySelector(location.hash);
+            if (!lb) return;
+
+            if (evt.key === 'ArrowLeft') {
+                const prev = lb.querySelector('.nav-arrow.prev');
+                if (prev) location.hash = prev.getAttribute('href');
+            } else if (evt.key === 'ArrowRight') {
+                const next = lb.querySelector('.nav-arrow.next');
+                if (next) location.hash = next.getAttribute('href');
+            } else if (evt.key === 'Escape') {
+                location.hash = '';
+            }
+        });
     </script>
 </body>
 </html>
