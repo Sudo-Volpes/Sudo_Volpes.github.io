@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plakidas Auto | Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +13,6 @@
             margin: 0;
             padding-top: 90px;
         }
-
         header {
             position: fixed;
             top: 0;
@@ -21,24 +21,20 @@
             z-index: 1000;
             box-shadow: 0 2px 8px #0008;
         }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0.6rem 2rem;
         }
-
         .logo-social {
             display: flex;
             align-items: center;
             gap: 1.3rem;
         }
-
         .logo {
             height: 50px;
         }
-
         .return-btn {
             color: #fff;
             background: #007bff;
@@ -49,17 +45,14 @@
             margin-left: 1rem;
             transition: background 0.2s;
         }
-
-            .return-btn:hover {
-                background: #0056b3;
-            }
-
+        .return-btn:hover {
+            background: #0056b3;
+        }
         nav {
             display: flex;
             align-items: center;
             gap: 2rem;
         }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -67,19 +60,16 @@
             margin: 0;
             padding: 0;
         }
-
-            .nav-links li a {
-                color: #fff;
-                text-decoration: none;
-                font-size: 1.1rem;
-                font-weight: 600;
-                transition: color 0.2s;
-            }
-
-                .nav-links li a:hover {
-                    color: #00e6e6;
-                }
-
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .nav-links li a:hover {
+            color: #00e6e6;
+        }
         .social-icons a img {
             height: 27px;
             margin-left: 1.3rem;
@@ -87,11 +77,9 @@
             opacity: 0.85;
             transition: opacity 0.2s;
         }
-
-            .social-icons a img:hover {
-                opacity: 1;
-            }
-
+        .social-icons a img:hover {
+            opacity: 1;
+        }
         .hamburger {
             display: none;
             font-size: 2.2rem;
@@ -99,7 +87,6 @@
             margin-left: 1rem;
             user-select: none;
         }
-
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -113,154 +100,66 @@
             box-shadow: -2px 0 10px #0008;
             padding: 1rem;
         }
-
-            .mobile-menu a {
-                color: #fff;
-                text-decoration: none;
-                margin-bottom: 1rem;
-                font-size: 1.1rem;
-            }
-
-                .mobile-menu a:hover {
-                    color: #00e6e6;
-                }
-
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .mobile-menu a:hover {
+            color: #00e6e6;
+        }
         section {
             padding: 2rem 1rem;
         }
-
         h2 {
             text-align: center;
             margin-bottom: 1rem;
         }
-
         .gallery-grid {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
-
-            .gallery-grid img {
-                width: 300px;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-                cursor: pointer;
-                transition: transform 0.2s, box-shadow 0.2s;
-                box-shadow: 0 2px 8px #0007;
-                background: #23272a;
-            }
-
-                .gallery-grid img:hover {
-                    transform: scale(1.05);
-                    box-shadow: 0 4px 16px #00e6e6aa;
-                }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background-color: rgba(0,0,0,0.96);
+        .gallery-grid img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px #0007;
+            background: #23272a;
         }
-
-        .lightbox-content {
-            margin: auto;
-            display: block;
-            max-width: 80vw;
-            max-height: 80vh;
-            border-radius: 10px;
-            box-shadow: 0 2px 18px #00e6e6aa;
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px #00e6e6aa;
         }
-
-        .lightbox:target {
-            display: block;
-        }
-
-        .close {
-            position: absolute;
-            top: 30px;
-            right: 45px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-            .close:hover {
-                color: #00e6e6;
-            }
-
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 60px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0 20px;
-            user-select: none;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .nav-arrow:hover {
-            color: #00e6e6;
-        }
-
-        /* Responsive design */
         @media (max-width: 900px) {
             .nav-links, .social-icons {
                 display: none;
             }
-
             .hamburger {
                 display: block;
             }
         }
-
         @media (max-width: 768px) {
             .gallery-grid img {
                 width: 95vw;
                 max-width: 100%;
                 height: auto;
             }
-
-            .nav-arrow {
-                font-size: 40px;
-                padding: 0 10px;
-            }
-
-            .close {
-                font-size: 30px;
-                right: 20px;
-            }
         }
-
         @media (max-width: 600px) {
             .nav-container {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 0.5rem 1rem;
             }
-
             .logo {
                 height: 40px;
             }
-
             .return-btn {
                 margin-left: 0.5rem;
                 font-size: 0.98rem;
@@ -269,7 +168,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-container">
             <div class="logo-social">
@@ -307,133 +205,44 @@
             </div>
         </div>
     </header>
-
     <section id="ix">
         <h2>Αυτοκίνητα Ι.Χ.</h2>
         <div class="gallery-grid">
-            <a href="#img1"><img src="img3.webp" alt="Ι.Χ. 1"></a>
-            <a href="#img2"><img src="jpeg2.webp" alt="Ι.Χ. 2"></a>
-            <a href="#img3"><img src="bumper1.webp" alt="Ι.Χ. 3"></a>
-            <a href="#img4"><img src="bump aygo.webp" alt="Ι.Χ. 4"></a>
-            <a href="#img5"><img src="bumper2.webp" alt="Ι.Χ. 5" /></a>
+            <a href="img3.webp" class="glightbox" data-gallery="ix" data-title="Daewoo matiz ολική βαφή"><img src="img3.webp" alt="Daewoo matiz ολική βαφή"></a>
+            <a href="jpeg2.webp" class="glightbox" data-gallery="ix" data-title="Ford Fiesta επισκευή απο πλαγιωμετωπική σύγκρουση"><img src="jpeg2.webp" alt="Ford Fiesta επισκευή απο πλαγιωμετωπική σύγκρουση"></a>
+            <a href="bumper1.webp" class="glightbox" data-gallery="ix" data-title="Skoda Octavia επισκευή από πλαγιωμετωπική σύγκρουση"><img src="bumper1.webp" alt="Skoda Octavia επισκευή από πλαγιωμετωπική σύγκρουση "></a>
+            <a href="bump aygo.webp" class="glightbox" data-gallery="ix" data-title="Toyota Aygo Επισκευή από οπίσθια σύκρουση"><img src="bump aygo.webp" alt="Ι.Χ. 4"></a>
+            <a href="bumper2.webp" class="glightbox" data-gallery="ix" data-title="Honda Jazz επισκευή από μετωπική σύγκρουση"><img src="bumper2.webp" alt="Honda Jazz επισκευή από μετωπική σύγκρουση"></a>
+            <a href="bumper3.webp" class="glightbox" data-gallery="ix" data-title="Ford Focus - Επισκευή από πλαγιωμετωπική σύγκρουση & τοπικές Βαφές"><img src="bumper3.webp" alt="Focus paint repair crash"></a>
+            <!-- Add more by copying this line -->
         </div>
     </section>
-
     <section id="moto">
         <h2>Μοτοσυκλέτες</h2>
         <div class="gallery-grid">
-            <a href="#img6"><img src="moto1.webp" alt="Μοτοσυκλέτα 1"></a>
-            <a href="#img7"><img src="moto2.webp" alt="Μοτοσυκλέτα 2"></a>
-            <a href="#img8"><img src="moto3.webp" alt="Μοτοσυκλέτα 3"></a>
-            <a href="#img9"><img src="moto4.webp" alt=" Μοτοσυκλέτα 4"</a>
+            <a href="moto1.webp" class="glightbox" data-gallery="moto" data-title="Επισκευή & Βαφή ντεπόζιτου μοτοσυκλέτας"><img src="moto1.webp" alt="Επισκευή & Βαφή ντεπόζιτου μοτοσυκλέτας"></a>
+            <a href="moto2.webp" class="glightbox" data-gallery="moto" data-title="Συγκόληση λασπωτήρα & Βαφή fairing"><img src="moto2.webp" alt="Συγκόληση λασπωτήρα & Βαφή fairing"></a>
+            <a href="moto3.webp" class="glightbox" data-gallery="moto" data-title="Βαφή ντεπόζιτου & fairing μοτοσυκλέτας"><img src="moto3.webp" alt="Βαφή ντεπόζιτου & fairing μοτοσυκλέτας"></a>
+            <a href="moto4.webp" class="glightbox" data-gallery="moto" data-title="Επισκευή fairing & Τοπικές Βαφες"><img src="moto4.webp" alt="Επισκευή fairing & Τοπικές Βαφες"></a>
         </div>
     </section>
-
     <section id="pro">
         <h2>Επαγγελματικά οχήματα</h2>
         <div class="gallery-grid">
-            <a href="#img10"><img src="pro1.webp" alt="Επαγγελματικό 1"></a>
-            <a href="#img11"><img src="pro2.webp" alt="Επαγγελματικό 2"></a>
-            <a href="#img12"><img src="pro3.webp" alt="Επαγγελματικό 3"></a>
+            <a href="pro1.webp" class="glightbox" data-gallery="pro" data-title="Mercedes Sprinter Van - επισκευή από πλαγιωμετωπική σύγκρουση"><img src="pro1.webp" alt="Mercedes Sprinter Van - επισκευή από πλαγιωμετωπική σύγκρουση"></a>
+            <a href="pro2.webp" class="glightbox" data-gallery="pro" data-title="Volvo Βαφή τμημάτων αμαξώματος"><img src="pro2.webp" alt="Volvo Βαφή τμημάτων αμαξώματος"></a>
+            <a href="pro3.webp" class="glightbox" data-gallery="pro" data-title="Volvo Επισκευή απο πλαγιωμετωπική σύγκρουση"><img src="pro3.webp" alt="Volvo Επισκευή απο πλαγιωμετωπική σύγκρουση"></a>
         </div>
     </section>
-
-    <!-- Lightboxes with navigation -->
-    <div id="img1" class="lightbox">
-        <a href="#img10" class="nav-arrow prev">&#10094;</a>
-        <a href="#img2" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="img3.webp">
-    </div>
-    <div id="img2" class="lightbox">
-        <a href="#img1" class="nav-arrow prev">&#10094;</a>
-        <a href="#img3" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="jpeg2.webp">
-    </div>
-    <div id="img3" class="lightbox">
-        <a href="#img2" class="nav-arrow prev">&#10094;</a>
-        <a href="#img4" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="bumper1.webp">
-    </div>
-    <div id="img4" class="lightbox">
-        <a href="#img3" class="nav-arrow prev">&#10094;</a>
-        <a href="#img5" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="bump aygo.webp">
-    </div>
-    <div id="img5" class="lightbox">
-        <a href="#img4" class="nav-arrow prev">&#10094;</a>
-        <a href="#img6" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="bumper2.webp">
-    </div>
-    <div id="img6" class="lightbox">
-        <a href="#img5" class="nav-arrow prev">&#10094;</a>
-        <a href="#img7" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="moto1.webp">
-    </div>
-    <div id="img7" class="lightbox">
-        <a href="#img6" class="nav-arrow prev">&#10094;</a>
-        <a href="#img8" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="moto2.webp">
-    </div>
-    <div id="img8" class="lightbox">
-        <a href="#img7" class="nav-arrow prev">&#10094;</a>
-        <a href="#img9" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="moto3.webp">
-    </div>
-    <div id="img9" class="lightbox">
-        <a href="#img8" class="nav-arrow prev">&#10094;</a>
-        <a href="#img10" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="moto4.webp">
-    </div>
-    <div id="img10" class="lightbox">
-        <a href="#img9" class="nav-arrow prev">&#10094;</a>
-        <a href="#img11" class="nav-arrow next">&#10095;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="pro1.webp">
-    </div>
-    <div id="img11" class="lightbox">
-        <a href="#img10" class=" nav-arrow prev">&#10094;</a>
-        <a href="#img1" class="nav-arrow next">&#10095; </a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="pro2.webp" />
-    <div id="img12" class="lightbox">
-        <a href="#img11" class=" nav-arrow prev">&#10094;</a>
-        <a href=#img1 class=" nav-arrow prev">&#10094;</a>
-        <a href="#" class="close">&times;</a>
-        <img class="lightbox-content" src="pro3.webp" />
-
-    </div>    
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('mobileMenu');
             menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
-    </script>
-    <script>
-        document.addEventListener('keydown', evt => {
-            if (!location.hash.startsWith('#img')) return;
-            const lb = document.querySelector(location.hash);
-            if (!lb) return;
-
-            if (evt.key === 'ArrowLeft') {
-                const prev = lb.querySelector('.nav-arrow.prev');
-                if (prev) location.hash = prev.getAttribute('href');
-            } else if (evt.key === 'ArrowRight') {
-                const next = lb.querySelector('.nav-arrow.next');
-                if (next) location.hash = next.getAttribute('href');
-            } else if (evt.key === 'Escape') {
-                location.hash = '';
-            }
+        // Init GLightbox
+        GLightbox({
+            selector: '.glightbox'
         });
     </script>
 </body>
