@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Υπηρεσίες | Plakidas Auto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Οι υπηρεσίες φανοποιείου και βαφής της Plakidas Auto.">
+    <link rel="icon" href="logo.webp">
+    <style>
+        :root {
+            --accent: #ffd600;
+            --dark: #232323;
+            --light: #fff;
+            --radius: 14px;
+            --shadow: 0 2px 12px rgba(0,0,0,0.06);
+            --blue: #2166d2;
+            --blue-hover: #0047a3;
+        }
+
+        body {
+            margin: 0;
+            background: var(--light);
+            color: var(--dark);
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .services-hero {
+            background: #181818;
+            color: var(--accent);
+            text-align: center;
+            padding: 3rem 1rem 2rem 1rem;
+            border-radius: 0 0 var(--radius) var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+            .services-hero h1 {
+                font-size: 2.6rem;
+                font-weight: bold;
+                margin-bottom: 0.6rem;
+            }
+
+            .services-hero p {
+                color: #fffbe8;
+                max-width: 500px;
+                margin: 0 auto;
+                font-size: 1.2rem;
+            }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            justify-content: center;
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .service-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            min-width: 240px;
+            max-width: 320px;
+            flex: 1 1 240px;
+            margin: 1rem 0.6rem;
+            padding: 1.4rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ffe25c1a;
+            transition: box-shadow 0.16s;
+        }
+
+            .service-card:hover {
+                box-shadow: 0 4px 22px #0002;
+            }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 0.6rem;
+            border-radius: 50%;
+            background-color: #eee;
+            background-size: 60% 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 2px 12px #0001;
+        }
+
+        .icon-bodywork {
+            background-image: url('bodywork.png');
+        }
+
+        .card-paint {
+            background-image: url('paint.jpeg');
+        }
+
+        .icon-polish {
+            background-image: url('polish.png');
+        }
+
+        .icon-insurance {
+            background-image: url('insurance.png');
+        }
+
+        .icon-pickup {
+            background-image: url('pickup.png');
+        }
+
+        .icon-clean {
+            background-image: url('clean.png');
+        }
+
+        .service-card h2 {
+            color: var(--accent);
+            font-size: 1.18rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+            color: #232323de;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .faq-section {
+            max-width: 630px;
+            margin: 2.5rem auto 0 auto;
+            background: #fffde7;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.7rem 1.3rem 1.2rem 1.3rem;
+        }
+
+            .faq-section h3 {
+                color: var(--accent);
+                margin-top: 0;
+                font-size: 1.18rem;
+            }
+
+        .faq-q {
+            font-weight: bold;
+            margin-top: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 3.5rem 0 2.2rem 0;
+        }
+
+        .cta-btn {
+            background: var(--blue);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            padding: 1.0em 2.6em;
+            font-size: 1.17rem;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            transition: background 0.15s, transform 0.15s;
+            display: inline-block;
+        }
+
+            .cta-btn:hover, .cta-btn:focus {
+                background: var(--blue-hover);
+                color: #fff;
+                transform: translateY(-2px) scale(1.045);
+            }
+
+        @media (max-width: 800px) {
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="services-hero">
+        <h1>Οι Υπηρεσίες μας</h1>
+        <p>Εδώ θα βρείτε αναλυτικά όλες τις υπηρεσίες που προσφέρουμε για να κάνουμε το αυτοκίνητό σας σαν καινούργιο.<br>Εμπειρία, τεχνογνωσία, αποτέλεσμα.</p>
+    </section>
+
+    <section class="services-list">
+        <div class="service-card card-bodywork">
+            <h2>Φανοποιία</h2>
+            <p>Επισκευή ζημιών αμαξώματος, αφαίρεση βαθουλωμάτων χωρίς βαφή (PDR), αποκατάσταση δομής μετά από τρακάρισμα.</p>
+        </div>
+        <div class="service-card card-paint">
+            <h2>Βαφή Αυτοκινήτου</h2>
+            <p>Ολική και τοπική βαφή, διόρθωση χρώματος, επαγγελματικά συστήματα βαφής με εγγύηση χρώματος.</p>
+        </div>
+        <div class="service-card card-polish">
+            <h2>Γυάλισμα & Κέρωμα</h2>
+            <p>Επαναφορά λάμψης και προστασία χρώματος με επαγγελματικά προϊόντα, αφαίρεση γρατζουνιών.</p>
+        </div>
+        <div class="service-card card-insurance">
+            <h2>Διεκπεραίωση Ασφαλιστικών</h2>
+            <p>Αναλαμβάνουμε όλη τη διαδικασία με την ασφαλιστική, χωρίς άγχος για εσάς.</p>
+        </div>
+        <div class="service-card card-pickup">
+            <h2>Παραλαβή/Παράδοση</h2>
+            <p>Παραλαμβάνουμε και παραδίδουμε το όχημά σας στον χώρο σας, για μέγιστη ευκολία.</p>
+        </div>
+        <div class="service-card card-clean">
+            <h2>Καθαρισμός Εσωτερικού</h2>
+            <p>Βιολογικός καθαρισμός καμπίνας και σαλόνι αυτοκινήτου, απολύμανση, απομάκρυνση οσμών.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h3>Συχνές Ερωτήσεις (FAQ)</h3>
+        <div class="faq-q">Πόσο διαρκεί μια επισκευή;</div>
+        <div class="faq-a">Οι μικρές επισκευές ολοκληρώνονται συνήθως σε 1-2 ημέρες. Για μεγαλύτερες ζημιές, ενημερώνουμε αναλυτικά μόλις δούμε το όχημα.</div>
+
+        <div class="faq-q">Δίνετε εγγύηση στις εργασίες σας;</div>
+        <div class="faq-a">Ναι! Όλες οι βαφές και επισκευές μας συνοδεύονται από γραπτή εγγύηση ποιότητας.</div>
+
+        <div class="faq-q">Αναλαμβάνετε και επαγγελματικά οχήματα;</div>
+        <div class="faq-a">Βεβαίως. Επισκευάζουμε ΙΧ, φορτηγάκια και επαγγελματικά οχήματα κάθε τύπου.</div>
+
+        <div class="faq-q">Μπορώ να πληρώσω με κάρτα;</div>
+        <div class="faq-a">Φυσικά, δεχόμαστε όλες τις κάρτες και POS.</div>
+    </section>
+
+    <div class="cta-section">
+        <a class="cta-btn" href="tel:6906849914">
+            📞 Καλέστε μας τώρα: 6906849914
+        </a>
+    </div>
+</body>
+</html>
