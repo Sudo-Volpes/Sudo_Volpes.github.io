@@ -1,139 +1,233 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Σχετικά με εμάς – Plakidas Auto | Φανοποιείο Βόλος</title>
-  <meta name="description" content="Γνωρίστε την ομάδα Plakidas Auto – φανοποιείο, βαφή αυτοκινήτων, επαγγελματικών οχημάτων, δίκυκλων & φορτηγών στον Βόλο. Παράδοση στον χώρο σας, ασφαλείς επισκευές.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://plakidasauto.netlify.app/about.html" />
-  <style>
-    body {
-      background: #111;
-      color: #ffe066;
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #181818;
-      border-radius: 18px;
-      box-shadow: 0 4px 20px #000a;
-      padding: 40px 24px 24px 24px;
-    }
-    h1, h2 {
-      color: #ffe066;
-      letter-spacing: 1px;
-    }
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 8px;
-      border-bottom: 2px solid #ffe06640;
-      padding-bottom: 10px;
-    }
-    h2 {
-      margin-top: 32px;
-      font-size: 1.35rem;
-      border-left: 5px solid #ffe06690;
-      padding-left: 12px;
-    }
-    p, li {
-      color: #fffde9;
-      font-size: 1.08rem;
-      line-height: 1.65;
-    }
-    .accent {
-      color: #ffe066;
-      font-weight: bold;
-    }
-    ul {
-      padding-left: 22px;
-    }
-    .about-photo {
-      display: block;
-      max-width: 220px;
-      border: 3px solid #ffe06690;
-      border-radius: 10px;
-      margin: 24px auto 32px auto;
-      box-shadow: 0 2px 12px #0009;
-    }
-    @media (max-width: 600px) {
-      .container { padding: 20px 6px; }
-      h1 { font-size: 1.5rem; }
-      h2 { font-size: 1.06rem; }
-    }
-    a {
-      color: #ffe066;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    a:hover {
-      color: #fff8b0;
-    }
-      .footer-social {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 22px; /* space between icons */
-          margin-bottom: 10px;
-          margin-top: 20px;
-      }
+    <meta charset="UTF-8">
+    <title>Σχετικά με εμάς – Plakidas Auto | Φανοποιείο Βόλος</title>
+    <meta name="description" content="Γνωρίστε την ομάδα Plakidas Auto – φανοποιείο, βαφή αυτοκινήτων, επαγγελματικών οχημάτων, δίκυκλων & φορτηγών στον Βόλο. Παράδοση στον χώρο σας, ασφαλείς επισκευές.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://plakidasauto.netlify.app/about.html" />
+    <style>
+        :root {
+            --accent: #ffd600;
+            --dark: #232323;
+            --light: #fff;
+            --shadow: 0 2px 12px rgba(0,0,0,0.06);
+            --radius: 14px;
+        }
 
-          .footer-social img {
-              width: 40px;
-              height: 40px;
-              object-fit: contain;
-              filter: drop-shadow(0 2px 4px #1118);
-              transition: transform 0.14s, filter 0.15s;
-          }
+        body {
+            background: #111;
+            color: #ffe066;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-              .footer-social img:hover {
-                  transform: scale(1.11) rotate(-6deg);
-                  filter: drop-shadow(0 2px 8px #ffe066b3);
-              }
+        header {
+            background: var(--dark);
+            color: var(--light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2vw;
+            position: fixed;
+            width: 97%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
 
-  </style>
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+            .logo-area img {
+                height: 50px;
+                border-radius: var(--radius);
+                background: var(--accent);
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2vw;
+        }
+
+            nav ul li a {
+                color: var(--light);
+                text-decoration: none;
+                padding: 5px 8px;
+                border-radius: 4px;
+            }
+
+                nav ul li a:hover {
+                    background: var(--accent);
+                    color: var(--dark);
+                }
+
+        .spacer {
+            height: 90px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #181818;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px #000a;
+            padding: 40px 24px 24px 24px;
+        }
+
+        h1, h2 {
+            color: #ffe066;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #ffe06640;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            font-size: 1.35rem;
+            border-left: 5px solid #ffe06690;
+            padding-left: 12px;
+        }
+
+        p, li {
+            color: #fffde9;
+            font-size: 1.08rem;
+            line-height: 1.65;
+        }
+
+        .accent {
+            color: #ffe066;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        .about-photo {
+            display: block;
+            max-width: 220px;
+            border: 3px solid #ffe06690;
+            border-radius: 10px;
+            margin: 24px auto 32px auto;
+            box-shadow: 0 2px 12px #0009;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 6px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.06rem;
+            }
+        }
+
+        a {
+            color: #ffe066;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+            a:hover {
+                color: #fff8b0;
+            }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+            .footer-social img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                filter: drop-shadow(0 2px 4px #1118);
+                transition: transform 0.14s, filter 0.15s;
+            }
+
+                .footer-social img:hover {
+                    transform: scale(1.11) rotate(-6deg);
+                    filter: drop-shadow(0 2px 8px #ffe066b3);
+                }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.webp" alt="Plakidas Auto φανοποιείο Βόλος" class="about-photo">
-    <h1>Σχετικά με εμάς – Plakidas Auto</h1>
-    <p>
-       <span class="accent">Η Plakidas Auto</span> – δραστηριοποείται στον Βόλο από το 1990! Εδώ, η <span class="accent">εμπειρία</span>, η <span class="accent">ποιότητα</span> και η <span class="accent">αξιοπιστία</span> συναντούν κάθε τύπο επισκευής αμαξώματος, βαφής και αποκατάστασης για αυτοκίνητα, <span class="accent">επαγγελματικά οχήματα, δίκυκλα</span> και <span class="accent">φορτηγά</span>.
-    </p>
-    
-    <h2>Οι Υπηρεσίες μας</h2>
-    <ul>
-      <li>Φανοποιείο αυτοκινήτων και βαφή κάθε τύπου οχήματος</li>
-      <li>Επισκευή & αποκατάσταση <span class="accent">επαγγελματικών οχημάτων και φορτηγών</span></li>
-      <li>Άμεση <span class="accent">παράδοση στον χώρο σας</span> (για επαγγελματίες & ιδιώτες)</li>
-      <li>Διαχείριση <span class="accent">ασφαλιστικών υποθέσεων</span> και συνεργασία με όλες τις ασφαλιστικές</li>
-      <li>Εξειδικευμένες λύσεις για στόλους οχημάτων και επιχειρήσεις</li>
-    </ul>
-    
-    <h2>Υπηρεσία παραλαβής από το χώρο σας</h2>
-    <p>
-        Προσφέρουμε υπηρεσία παραλαβής και παράδοσης οχήματος στο χώρο σας. Αναλαμβάνουμε την μεταφορά του οχήματος σας από και προς το συνεργείο,εξασφαλίζοντας άμεση και ασφαλή εξυπηρέτηση χωρίς ταλαιπωρία για τον πελάτη. 
-    </p>
-    
-    <h2>Επικοινωνήστε μαζί μας</h2>
-    <p>
-      Θα μας βρείτε στη Β' ΒΙΠΕ Βόλου. Καλέστε μας στο <a href="tel:+306906849914">6906849914</a> για πληροφορίες, ραντεβού ή προσφορές.
-    </p>
-  </div>
-  <section>
-      <footer>
-          <div class="footer-social">
-              <a href="https://www.tiktok.com/@plakidas.auto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
-              <a href="https://www.instagram.com/plakidasauto/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
-              <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
-          </div>
-          <div>
-              &copy; 2025 Plakidas Auto. All Rights Reserved.<br>
-              <a href="mailto:plakidasauto@gmail.com" style="color:var(--accent)">plakidasauto@gmail.com</a>
-          </div>
-      </footer>
-  </section>
+    <header>
+        <div class="logo-area">
+            <img src="logo.webp" alt="Plakidas Auto logo" />
+            <div>
+                <span style="font-weight:bold;font-size:1.2rem;letter-spacing:1px;">PLAKIDAS AUTO</span><br />
+                <span style="font-size:0.9rem;font-weight:300;color:var(--accent);">Μαζί σας από το 1990</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="services.html">Υπηρεσίες</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="about">Σχετικά</a></li>
+                <li><a href="index.html#contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="spacer"></div>
+    <div class="container">
+        <img src="logo.webp" alt="Plakidas Auto φανοποιείο Βόλος" class="about-photo">
+        <h1>Σχετικά με εμάς – Plakidas Auto</h1>
+        <p>
+            <span class="accent">Η Plakidas Auto</span> – δραστηριοποείται στον Βόλο από το 1990! Εδώ, η <span class="accent">εμπειρία</span>, η <span class="accent">ποιότητα</span> και η <span class="accent">αξιοπιστία</span> συναντούν κάθε τύπο επισκευής αμαξώματος, βαφής και αποκατάστασης για αυτοκίνητα, <span class="accent">επαγγελματικά οχήματα, δίκυκλα</span> και <span class="accent">φορτηγά</span>.
+        </p>
+        <h2>Οι Υπηρεσίες μας</h2>
+        <ul>
+            <li>Φανοποιείο αυτοκινήτων και βαφή κάθε τύπου οχήματος</li>
+            <li>Επισκευή & αποκατάσταση <span class="accent">επαγγελματικών οχημάτων και φορτηγών</span></li>
+            <li>Άμεση <span class="accent">παράδοση στον χώρο σας</span> (για επαγγελματίες & ιδιώτες)</li>
+            <li>Διαχείριση <span class="accent">ασφαλιστικών υποθέσεων</span> και συνεργασία με όλες τις ασφαλιστικές</li>
+            <li>Εξειδικευμένες λύσεις για στόλους οχημάτων και επιχειρήσεις</li>
+        </ul>
+        <h2>Υπηρεσία παραλαβής από το χώρο σας</h2>
+        <p>
+            Προσφέρουμε υπηρεσία παραλαβής και παράδοσης οχήματος στο χώρο σας. Αναλαμβάνουμε την μεταφορά του οχήματος σας από και προς το συνεργείο,εξασφαλίζοντας άμεση και ασφαλή εξυπηρέτηση χωρίς ταλαιπωρία για τον πελάτη.
+        </p>
+        <h2>Επικοινωνήστε μαζί μας</h2>
+        <p>
+            Θα μας βρείτε στη Β' ΒΙΠΕ Βόλου. Καλέστε μας στο <a href="tel:+306906849914">6906849914</a> για πληροφορίες, ραντεβού ή προσφορές.
+        </p>
+    </div>
+    <section>
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.tiktok.com/@plakidas.auto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
+                <a href="https://www.instagram.com/plakidasauto/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+                <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            </div>
+            <div>
+                &copy; 2025 Plakidas Auto. All Rights Reserved.<br>
+                <a href="mailto:plakidasauto@gmail.com" style="color:var(--accent)">plakidasauto@gmail.com</a>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
