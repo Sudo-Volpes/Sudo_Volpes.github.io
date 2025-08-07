@@ -171,6 +171,42 @@
                     transform: scale(1.11) rotate(-6deg);
                     filter: drop-shadow(0 2px 8px #ffe066b3);
                 }
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: var(--light);
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        /* Responsive nav for mobile */
+        @media (max-width: 850px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                right: 2vw;
+                top: 70px;
+                background: var(--dark);
+                flex-direction: column;
+                gap: 0;
+                width: 180px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                z-index: 100;
+                padding: 0.5rem 0;
+            }
+
+                nav ul.active {
+                    display: flex;
+                }
+
+            .hamburger {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -182,6 +218,8 @@
                 <span style="font-size:0.9rem;font-weight:300;color:var(--accent);">Μαζί σας από το 1990</span>
             </div>
         </div>
+        <button class="hamburger" aria-label="Menu">&#9776;</button>
+
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
@@ -229,5 +267,14 @@
             </div>
         </footer>
     </section>
+    <script>document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('active');
+});
+// Optional: Hide menu when clicking a nav link (mobile UX)
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('nav ul').classList.remove('active');
+    });
+});</script>
 </body>
 </html>

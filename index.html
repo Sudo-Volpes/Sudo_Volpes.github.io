@@ -38,7 +38,7 @@
             align-items: center;
             padding: 1rem 2vw;
             position: fixed;
-            width: 100vw;
+            width: 97%;
             top: 0;
             left: 0;
             z-index: 100;
@@ -290,70 +290,41 @@
                 height: 24px;
                 margin: 0 3px;
             }
-        /* MOBILE */
-        @media (max-width: 750px) {
-            header {
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: var(--light);
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        /* Responsive nav for mobile */
+        @media (max-width: 850px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                right: 2vw;
+                top: 70px;
+                background: var(--dark);
                 flex-direction: column;
-                gap: 8px;
-                padding: 1rem 1vw;
+                gap: 0;
+                width: 180px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                z-index: 100;
+                padding: 0.5rem 0;
             }
 
-            .spacer {
-                height: 125px;
-            }
+                nav ul.active {
+                    display: flex;
+                }
 
             .hamburger {
                 display: block;
-                background: var(--accent);
-                color: var(--dark);
-                border: none;
-                font-size: 2rem;
-                padding: 8px 12px;
-                border-radius: var(--radius);
-                cursor: pointer;
-                margin-left: 8px;
-                z-index: 120;
-                position: absolute;
-                right: 60px;
-                top: 24px;
             }
-
-            nav {
-                display: none;
-                width: 100vw;
-                background: var(--dark);
-                position: absolute;
-                left: 0;
-                top: 75px; /* below header */
-                z-index: 110;
-                box-shadow: var(--shadow);
-                padding-bottom: 20px;
-            }
-
-                nav.open {
-                    display: block;
-                    animation: fadeIn 0.18s;
-                }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(-12px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: none;
-                }
-            }
-
-            .social-icons {
-                margin-top: 8px;
-            }
-        }
-
-        .hamburger {
-            display: none; /* Only show on mobile */
         }
     </style>
 </head>
@@ -366,7 +337,7 @@
                 <span class="logo-sub">Μαζί σας από το 1990</span>
             </div>
         </div>
-        <button class="hamburger" aria-label="Άνοιγμα μενού">&#9776;</button>
+        <button class="hamburger" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="#">Αρχική</a></li>
@@ -389,7 +360,7 @@
             Αξιόπιστες λύσεις φανοποιίας και βαφής αυτοκινήτου στον Βόλο – Επαγγελματισμός, εμπειρία και προσοχή στη λεπτομέρεια για κάθε όχημα.
         </div>
         <div class="hero-buttons">
-            <a class="btn-blue"href="https://plakidasauto.netlify.app/gallery">Δείτε τη δουλειά μας</a>
+            <a class="btn-blue" href="https://plakidasauto.netlify.app/gallery">Δείτε τη δουλειά μας</a>
             <a href="https://www.tiktok.com/@plakidas.auto" target="_blank">Δείτε μας στο TikTok</a>
         </div>
     </section>
@@ -431,26 +402,14 @@
         </div>
     </footer>
     <script>
-        // Hamburger click toggles nav
-        const burger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav');
-
-        burger.addEventListener('click', function () {
-            nav.classList.toggle('open');
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
         });
-
-        // Optional: Hide menu when clicking a nav link (for better UX)
-        nav.querySelectorAll('a').forEach(link => {
+        // Optional: Hide menu when clicking a nav link (mobile UX)
+        document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('open');
+                document.querySelector('nav ul').classList.remove('active');
             });
-        });
-
-        // Optional: When resizing window, if on desktop, ensure nav is visible
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 750) {
-                nav.classList.remove('open');
-            }
         });
     </script>
 </body>
