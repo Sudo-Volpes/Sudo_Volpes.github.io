@@ -7,10 +7,12 @@
     <meta name="description" content="Επαγγελματικές επισκευές σασί και πλαισίου για κάθε τύπο αυτοκινήτου στον Βόλο. Ευθυγράμμιση και αποκατάσταση με ακρίβεια από την Plakidas Auto." />
     <link rel="canonical" href="https://plakidasauto.netlify.app/services/episkeves-plaisio-volos.html" />
     <style>
+        /* Reuse some variables and basic styling from the main page */
         :root {
             --accent: #ffd600;
             --dark: #232323;
             --light: #fff;
+            --shadow: 0 2px 12px rgba(0,0,0,0.06);
             --radius: 14px;
         }
 
@@ -18,6 +20,8 @@
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
 
         header {
@@ -26,14 +30,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 4vw;
+            padding: 1rem 2vw;
             position: fixed;
             width: 97%;
             top: 0;
             left: 0;
             z-index: 100;
-            box-sizing: border-box;
-            transition: padding 0.2s;
+            box-shadow: var(--shadow);
         }
 
         .logo-area {
@@ -43,30 +46,15 @@
         }
 
             .logo-area img {
-                height: 2.5rem;
-                max-width: 48px;
+                height: 50px;
                 border-radius: var(--radius);
                 background: var(--accent);
-                transition: height 0.2s;
             }
-
-        .logo-text {
-            font-weight: bold;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-        }
-
-        .logo-sub {
-            font-size: 0.95rem;
-            font-weight: 300;
-            color: var(--accent);
-            margin-top: 2px;
-        }
 
         nav ul {
             list-style: none;
-            margin: 0;
             padding: 0;
+            margin: 0;
             display: flex;
             gap: 2vw;
         }
@@ -74,10 +62,8 @@
             nav ul li a {
                 color: var(--light);
                 text-decoration: none;
-                font-size: 1.1rem;
-                padding: 6px 10px;
+                padding: 5px 8px;
                 border-radius: 4px;
-                transition: background 0.18s;
             }
 
                 nav ul li a:hover {
@@ -85,93 +71,104 @@
                     color: var(--dark);
                 }
 
-        /* Hamburger for mobile */
+        .spacer {
+            height: 90px;
+        }
+
+        main {
+            padding: 1rem 2vw;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--dark);
+            margin-top: 0;
+            padding-top: 1rem;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 2rem;
+        }
+
+        section.service {
+            margin-bottom: 2rem;
+        }
+
+        .cta {
+            margin-top: 1rem;
+        }
+
+            .cta a {
+                background: var(--accent);
+                color: var(--dark);
+                padding: 0.6rem 1.4rem;
+                border-radius: var(--radius);
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .cta a:hover {
+                    background: #fff;
+                    color: var(--dark);
+                }
+        /* Hamburger hidden by default */
         .hamburger {
             display: none;
             font-size: 2rem;
-            background: var(--accent);
-            color: var(--dark);
+            background: none;
             border: none;
-            border-radius: var(--radius);
-            padding: 7px 12px;
-            margin-left: 10px;
+            color: var(--light);
             cursor: pointer;
             z-index: 101;
         }
 
-        @media (max-width: 900px) {
+        /* Responsive nav for mobile */
+        @media (max-width: 850px) {
             nav ul {
-                gap: 1vw;
+                display: none;
+                position: absolute;
+                right: 2vw;
+                top: 70px;
+                background: var(--dark);
+                flex-direction: column;
+                gap: 0;
+                width: 180px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                z-index: 100;
+                padding: 0.5rem 0;
             }
 
-            .logo-text {
-                font-size: 1.08rem;
-            }
+                nav ul.active {
+                    display: flex;
+                }
 
-            header {
-                padding: 0.5rem 2vw;
-            }
-        }
-
-        @media (max-width: 700px) {
             .hamburger {
                 display: block;
-            }
-
-            nav {
-                position: absolute;
-                background: var(--dark);
-                right: 0;
-                top: 100%;
-                width: 100vw;
-                box-shadow: 0 4px 16px #0004;
-                display: none;
-                flex-direction: column;
-                padding-bottom: 20px;
-            }
-
-                nav.open {
-                    display: block;
-                }
-
-                nav ul {
-                    flex-direction: column;
-                    gap: 0;
-                }
-
-                    nav ul li {
-                        text-align: right;
-                    }
-        }
-        /* Dynamic spacer below the header */
-        .spacer {
-            height: 1px;
-        }
-
-        @media (max-width: 500px) {
-            .logo-area img {
-                height: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header id="main-header">
+    <header>
         <div class="logo-area">
-            <img src="assets/logo.webp" alt="Plakidas Auto logo" />
+            <img src="logo.webp" alt="Plakidas Auto logo" />
             <div>
-                <span class="logo-text">PLAKIDAS AUTO</span><br>
-                <span class="logo-sub">Μαζί σας από το 1990</span>
+                <span style="font-weight:bold;font-size:1.2rem;letter-spacing:1px;">PLAKIDAS AUTO</span><br />
+                <span style="font-size:0.9rem;font-weight:300;color:var(--accent);">Μαζί σας από το 1990</span>
             </div>
         </div>
-        <button class="hamburger" aria-label="Μενού">&#9776;</button>
+        <button class="hamburger" aria-label="Menu">&#9776;</button>
+
         <nav>
             <ul>
-                <li><a href="../index.html">Αρχική</a></li>
-                <li><a href="../services.html">Υπηρεσίες</a></li>
-                <li><a href="../gallery">Gallery</a></li>
-                <li><a href="../about">Σχετικά</a></li>
-                <li><a href="../index.html#contact">Επικοινωνία</a></li>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="services.html">Υπηρεσίες</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="about">Σχετικά</a></li>
+                <li><a href="index.html#contact">Επικοινωνία</a></li>
             </ul>
         </nav>
     </header>
@@ -192,5 +189,16 @@
         <p>Η διαδικασία ξεκινά με λεπτομερή έλεγχο ώστε να εντοπίσουμε το μέγεθος της ζημιάς. Στη συνέχεια χρησιμοποιούμε συστήματα μέτρησης και υδραυλικούς εξοπλισμούς για να επαναφέρουμε το πλαίσιο στις εργοστασιακές προδιαγραφές. Μετά την αποκατάσταση, πραγματοποιείται εκ νέου έλεγχος και test drive για να διασφαλίσουμε ότι το όχημα ανταποκρίνεται σωστά στον δρόμο.</p>
         <div class="cta"><a href="../index.html#contact">Κλείστε ραντεβού</a></div>
     </main>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+        // Optional: Hide menu when clicking a nav link (mobile UX)
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
