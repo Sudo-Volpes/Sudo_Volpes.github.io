@@ -326,6 +326,18 @@
                 display: block;
             }
         }
+        .service-card {
+            cursor: pointer;
+            transition: box-shadow 0.18s, border 0.18s, transform 0.16s;
+        }
+
+            .service-card:hover {
+                box-shadow: 0 6px 28px #0002;
+                border-color: var(--accent);
+                transform: translateY(-2px) scale(1.03);
+                text-decoration: none;
+            }
+
     </style>
 </head>
 <body>
@@ -365,18 +377,18 @@
         </div>
     </section>
     <section id="services" class="services-section">
-        <div class="service-card">
+        <a href="services/bafes-autokiniton-volos.html" class="service-card" style="text-decoration:none;">
             <h3>Επισκευές Βαφής</h3>
             <p>Βαφές και επιδιορθώσεις με κορυφαία υλικά και τεχνογνωσία.</p>
-        </div>
-        <div class="service-card">
+        </a>
+        <a href="services/fanopoieio-vafes-volos.html" class="service-card" style="text-decoration:none;">
             <h3>Επισκευές Αμαξώματος</h3>
             <p>Διορθώσεις ζημιών και αποκατάσταση αμαξώματος με ακρίβεια.</p>
-        </div>
-        <div class="service-card">
+        </a>
+        <a href="services/asfaleies-volos.html" class="service-card" style="text-decoration:none;">
             <h3>Διεκπεραίωση Ασφαλιστικών Υποθέσεων</h3>
             <p>Αναλαμβάνουμε όλη τη διαδικασία για να μην έχετε άγχος, με δυνατότητα παραλαβής & παράδοσης στο χώρο σας.</p>
-        </div>
+        </a>
     </section>
     <section id="contact" class="contact-map-section">
         <div class="contact-details">
