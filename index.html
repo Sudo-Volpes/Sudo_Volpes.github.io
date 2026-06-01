@@ -13,9 +13,11 @@
     <title>Plakidas Auto | Μαζί σας από το 1990</title>
     <meta name="description" content="Plakidas Auto - Φανοποιείο και βαφή αυτοκινήτων στη Βόλο. Επαγγελματισμός, εμπειρία, ποιότητα.">
     <link rel="icon" href="logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --accent: #ffd600; /* Yellow like your logo */
+            --accent: #ffd600; /* Yellow like the logo */
             --dark: #232323;
             --light: #fff;
             --shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -24,7 +26,7 @@
 
         body {
             margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
             background: var(--light);
             color: var(--dark);
             line-height: 1.6;
@@ -131,8 +133,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #181818 url('hero%201.JPEG') center/cover no-repeat;
-            min-height: 360px;
+            background: #181818 url('hero%201.webp') center/cover no-repeat;
+            min-height: 480px;
             color: var(--accent);
             border-radius: 0 0 var(--radius) var(--radius);
             box-shadow: var(--shadow);
@@ -146,15 +148,22 @@
             font-size: 2.7rem;
             font-weight: 900;
             margin-bottom: 0.8rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            color: white;
         }
 
         .hero-sub {
             font-size: 1.2rem;
             margin-bottom: 1.6rem;
             color: #fffbe8;
-            max-width: 480px;
+            max-width: 1980px;
             text-align: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            font-weight: 600;
+        }
+
         }
 
         .hero-buttons {
@@ -179,10 +188,12 @@
                     background: #fff;
                     color: var(--dark);
                 }
+
             .hero-buttons .btn-blue {
                 background: #0047a3;
                 color: #fff !important;
             }
+
                 .hero-buttons .btn-blue:hover {
                     background: #000080;
                     color: #fff !important;
@@ -326,6 +337,7 @@
                 display: block;
             }
         }
+
         .service-card {
             cursor: pointer;
             transition: box-shadow 0.18s, border 0.18s, transform 0.16s;
@@ -337,7 +349,6 @@
                 transform: translateY(-2px) scale(1.03);
                 text-decoration: none;
             }
-
     </style>
 </head>
 <body>
