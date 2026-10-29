@@ -10,3 +10,6 @@
 
 # local scratch (tests, reports, temp downloads)
 .tmp/
+
+# dependencies (static site; regenerated via npm install)
+node_modules/
