@@ -192,36 +192,11 @@
         writeStored(state);
         applyState(state);
         removeBanner();
-        showReopen();
     }
 
     function removeBanner() {
         var b = document.getElementById('plakidas-cc-banner');
         if (b && b.parentNode) b.parentNode.removeChild(b);
-    }
-
-    /* ------------------- Re-open / change consent ------------------- */
-    function showReopen() {
-        if (document.getElementById('plakidas-cc-reopen')) return;
-        var btn = document.createElement('button');
-        btn.type = 'button';
-        btn.id = 'plakidas-cc-reopen';
-        btn.textContent = '\uD83C\uDF6A  Ρυθμίσεις cookie';
-        btn.setAttribute('aria-label', 'Επεξεργασία ή αναίρεση ρυθμίσεων cookie');
-        btn.addEventListener('click', openPreferences);
-        document.body.appendChild(btn);
-    }
-
-    function openPreferences() {
-        var stored = readStored();
-        var banner = buildBanner();
-        var panel = document.getElementById('plakidas-cc-panel');
-        panel.classList.add('open');
-        panel.setAttribute('aria-hidden', 'false');
-        // reflect the current (stored) choice in the toggles
-        document.getElementById('cc-opt-fonts').checked = !!(stored && stored.fonts);
-        document.getElementById('cc-opt-map').checked = !!(stored && stored.map);
-        banner.setAttribute('aria-label', 'Cookie και απορρήτου – επεξεργασία επιλογών');
     }
 
     /* ------------------- Explicit, individual opt-in for the map ------------------- */
@@ -264,7 +239,6 @@
         var stored = readStored();
         if (stored) {
             applyState(stored);   // apply the previously saved choice; load nothing new
-            showReopen();
         } else {
             buildBanner();        // first visit: show banner, load NO third parties
         }
