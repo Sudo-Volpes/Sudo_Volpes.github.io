@@ -146,10 +146,18 @@
             }
         }
         @media (max-width: 768px) {
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                justify-content: stretch;
+            }
             .gallery-grid img {
-                width: 95vw;
+                width: 100%;
                 max-width: 100%;
                 height: auto;
+                aspect-ratio: 3 / 2;
+                object-fit: cover;
             }
         }
         @media (max-width: 600px) {
