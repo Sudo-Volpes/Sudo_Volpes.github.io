@@ -26,7 +26,7 @@
         .page {
             max-width: 860px;
             margin: 0 auto;
-            padding: 4rem 1.5rem 3rem;
+            padding: 1.5rem 1.5rem 3rem;
         }
         h1 {
             font-size: 2.1rem;
@@ -73,8 +73,34 @@
         }
         .pcc-privacy-link { color: var(--accent) !important; }
     </style>
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
+    <header>
+        <div class="logo-area">
+            <img src="logo.webp" alt="Plakidas Auto logo" />
+            <div class="logo-wordmark">
+                <span class="logo-text">PLAKIDAS AUTO</span>
+                <span class="logo-sub">Μαζί σάς από το 1990</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index">Αρχική</a></li>
+                <li><a href="services">Υπηρεσίες</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="about">Σχετικά</a></li>
+                <li><a href="index#contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@plakidasauto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
+            <a href="https://www.instagram.com/plakidasauto/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        </div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    </header>
+    <div class="spacer"></div>
     <main class="page">
         <h1>Πολιτική Απορρήτου</h1>
         <p class="updated">Τελευταία ενημέρωση: 2025 · Plakidas Auto – Β' ΒΙΠΕ Βόλου, 37500</p>
@@ -82,7 +108,7 @@
         <p>Η <strong>Plakidas Auto</strong> («εμείς», «ο ιστότοπος») σέβεται την προστασία των προσωπικών σας δεδομένων και τηρεί τις διατάξεις του <strong>Κανονισμού (ΕΕ) 2016/679 (GDPR)</strong>, καθώς και της <strong>Νομοθεσίας περί ηλ. επικοινωνίας (ePrivacy)</strong>. Η παρούσα πολιτική εξηγεί πώς και για ποιους σκοπούς χρησιμοποιούμε cookies και τρίτες υπηρεσίες όταν επισκέπτεστε τον ιστότοπο <a href="https://plakidasauto.netlify.app/">plakidasauto.netlify.app</a>.</p>
 
         <h2>1. Ποιος είναι ο υπεύθυνος επεξεργασίας</h2>
-        <p>Πλοχίδης / Plakidas Auto, Β' ΒΙΠΕ Βόλου, 37500. Email: <a href="mailto:plakidasauto@gmail.com">plakidasauto@gmail.com</a> · Τηλέφωνο: <a href="tel:6947846531">694 784 6531</a>.</p>
+        <p>Plakidas Auto, Β' ΒΙΠΕ Βόλου, 37500. Email: <a href="mailto:plakidasauto@gmail.com">plakidasauto@gmail.com</a> · Τηλέφωνο: <a href="tel:6947846531">694 784 6531</a>.</p>
 
         <h2>2. Ποια δεδομένα συλλέγουμε</h2>
         <p>Ο ιστότοπος δεν διαθέτει φόρμες εγγραφής ή συνδρομής και δεν ζητά προσωπικά δεδομένα χωρίς αιτιολόγηση. Όταν επικοινωνείτε μαζί μας (τηλεφωνικά, μέσω email ή μέσω των δικτύων κοινωνικής δικτύωσης), επεξεργαζόμαστε αποκλειστικά τα στοιχεία που μας παραθέτετε, για τον σκοπό της εξυπηρέτησής σας (π.χ. παραγγελία επισκευής, ραντεβού, διεκπεραίωση ασφαλιστικής υπόθεσης).</p>
@@ -134,5 +160,6 @@
         <div>&copy; 2025 Plakidas Auto. All Rights Reserved.</div>
     </footer>
     <script src="cookie-consent.js" defer></script>
+    <script src="header.js"></script>
 </body>
 </html>

@@ -209,27 +209,32 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
     <header>
         <div class="logo-area">
             <img src="logo.webp" alt="Plakidas Auto logo" />
-            <div>
-                <span style="font-weight:bold;font-size:1.2rem;letter-spacing:1px;">PLAKIDAS AUTO</span><br />
-                <span style="font-size:0.9rem;font-weight:300;color:var(--accent);">Μαζί σας από το 1990</span>
+            <div class="logo-wordmark">
+                <span class="logo-text">PLAKIDAS AUTO</span>
+                <span class="logo-sub">Μαζί σάς από το 1990</span>
             </div>
         </div>
-        <button class="hamburger" aria-label="Menu">&#9776;</button>
-
         <nav>
             <ul>
-                <li><a href="index.html">Αρχική</a></li>
-                <li><a href="services.html">Υπηρεσίες</a></li>
+                <li><a href="index">Αρχική</a></li>
+                <li><a href="services">Υπηρεσίες</a></li>
                 <li><a href="gallery">Gallery</a></li>
                 <li><a href="about">Σχετικά</a></li>
-                <li><a href="index.html#contact">Επικοινωνία</a></li>
+                <li><a href="index#contact">Επικοινωνία</a></li>
             </ul>
         </nav>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@plakidasauto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
+            <a href="https://www.instagram.com/plakidasauto/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        </div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
     </header>
     <div class="spacer"></div>
     <div class="container">
@@ -258,7 +263,7 @@
     <section>
         <footer>
             <div class="footer-social">
-                <a href="https://www.tiktok.com/@plakidas.auto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
+                <a href="https://www.tiktok.com/@plakidasauto" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"></a>
                 <a href="https://www.instagram.com/plakidasauto/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
                 <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
             </div>
@@ -268,15 +273,7 @@
             </div>
         </footer>
     </section>
-    <script>document.querySelector('.hamburger').addEventListener('click', function() {
-    document.querySelector('nav ul').classList.toggle('active');
-});
-// Optional: Hide menu when clicking a nav link (mobile UX)
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('nav ul').classList.remove('active');
-    });
-});</script>
     <script src="cookie-consent.js" defer></script>
+    <script src="header.js"></script>
 </body>
 </html>
