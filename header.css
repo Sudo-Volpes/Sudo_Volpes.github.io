@@ -27,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.65rem;
+    text-decoration: none;
 }
 
 .logo-area img {
