@@ -13,7 +13,8 @@
     <title>Plakidas Auto | Μαζί σας από το 1990</title>
     <meta name="description" content="Plakidas Auto - Φανοποιείο και βαφή αυτοκινήτων στη Βόλο. Επαγγελματισμός, εμπειρία, ποιότητα.">
     <link rel="icon" href="logo.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link id="cc-fonts-link" rel="stylesheet" data-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
+    <link rel="stylesheet" href="cookie-consent.css">
     
     <style>
         :root {
@@ -409,8 +410,14 @@
             <p><strong>Email:</strong> <a href="mailto:plakidasauto@gmail.com">plakidasauto@gmail.com</a></p>
             <p><strong>Facebook:</strong> <a href="https://web.facebook.com/profile.php?id=100064307550654" target="_blank">Plakidas Auto</a></p>
         </div>
-        <div class="map-embed">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4666031240704!2d22.805528176469725!3d39.39094851743124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a76dcc7b516fdb%3A0xf0a428057b853336!2zzqDOu86xzrrOuc60zrHPgiDOp86xz4HOr867zrHOv8-C!5e0!3m2!1sen!2sgr!4v1737730785837!5m2!1sen!2sgr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-embed" id="cc-map-wrap">
+            <iframe id="cc-map-iframe" title="Χάρτης θέσης Plakidas Auto" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.4666031240704!2d22.805528176469725!3d39.39094851743124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a76dcc7b516fdb%3A0xf0a428057b853336!2zzqDOu86xzrrOuc60zrHPgiDOp86xz4HOr867zrHOv8-C!5e0!3m2!1sen!2sgr!4v1737730785837!5m2!1sen!2sgr" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="pcc-map-placeholder" id="cc-map-placeholder">
+                <button type="button" class="pcc-map-load" id="cc-map-load-btn">
+                    <span class="pcc-map-load-title">📍 Να δείτε τον χάρτη / Load map</span>
+                    <small>Με το φόρτωμα, αποστέλλονται δεδομένα στον Google Χάρτη</small>
+                </button>
+            </div>
         </div>
     </section>
     <footer>
@@ -435,5 +442,6 @@
             });
         });
     </script>
+    <script src="cookie-consent.js" defer></script>
 </body>
 </html>

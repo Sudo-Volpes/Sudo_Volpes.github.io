@@ -7,3 +7,6 @@
 .vs/Sudo_Volpes.github.io/v17/DocumentLayout.json
 .vs/VSWorkspaceState.json
 .vs/Sudo_Volpes.github.io/v17/DocumentLayout.backup.json
+
+# local scratch (tests, reports, temp downloads)
+.tmp/
