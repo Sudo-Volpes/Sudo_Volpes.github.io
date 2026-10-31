@@ -179,6 +179,27 @@
             transform: scale(1.05);
             box-shadow: 0 4px 16px #fef100aa;
         }
+        .gallery-footer {
+            margin-top: 1.2rem;
+            padding: 1.5rem 1rem 1.7rem;
+            background: #111;
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+            color: #c8c8c8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .gallery-footer p {
+            margin: 0.25rem 0;
+        }
+        .gallery-footer a {
+            color: #ffd600;
+            text-decoration: none;
+        }
+        .gallery-footer a:hover,
+        .gallery-footer a:focus {
+            text-decoration: underline;
+        }
         @media (max-width: 900px) {
             .nav-links, .social-icons {
                 display: none;
@@ -450,7 +471,13 @@
     <script src="cookie-consent.js" defer></script>
     <script src="header.js"></script>
 
-    <a class="callbar" href="tel:+306947846531" aria-label="Καλέστε μας στο 6947846531">
+    <footer class="gallery-footer">
+        <p><strong>Plakidas Auto</strong> - Φανοποιείο &amp; Βαφές Αυτοκινήτων</p>
+        <p>Β' ΒΙΠΕ Βόλου, 37500</p>
+        <p><a href="tel:+306947846531">6947846531</a> · <a href="mailto:plakidasauto@gmail.com">plakidasauto@gmail.com</a></p>
+        <p><a href="index.html">Αρχική</a> · <a href="services">Υπηρεσίες</a> · <a href="about">Σχετικά</a></p>
+    </footer>
+    <a class="callbar" data-show-near="footer" href="tel:+306947846531" aria-label="Καλέστε μας στο 6947846531">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.2.6 3.4.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.3.6 3.4.1.3 0 .7-.2 1l-2.3 2.4z"/></svg>
         <span>Καλέστε μας · 6947846531</span>
     </a>
