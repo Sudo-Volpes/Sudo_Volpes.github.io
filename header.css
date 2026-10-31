@@ -254,6 +254,31 @@ nav ul li a:hover {
         color: #232323;
     }
 
+    /* Opt-in: a page can name a section with data-show-near and the bar
+       stays out of the way until that section (or the footer) is on screen. */
+    .callbar[data-show-near] {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(110%);
+        pointer-events: none;
+        transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0.22s;
+    }
+
+    .callbar[data-show-near].is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+        transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .callbar[data-show-near] {
+            transform: none;
+            transition: none;
+        }
+    }
+
     /* Leave room at the end of every page so the bar never covers content. */
     body {
         padding-bottom: calc(58px + env(safe-area-inset-bottom));
