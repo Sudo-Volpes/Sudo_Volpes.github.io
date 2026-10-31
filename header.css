@@ -216,3 +216,46 @@ nav ul li a:hover {
         background: rgba(255, 214, 0, 0.15);
     }
 }
+
+/* ====================== STICKY CALL BAR (mobile) ======================
+   Most local traffic arrives on a phone, so keep a one-tap call button
+   pinned to the bottom of the screen. It sits under the cookie banner
+   (z-index 2000) so the two never fight for the same space. */
+.callbar { display: none; }
+
+@media (max-width: 860px) {
+    .callbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1900;
+        padding: 0.8rem 1rem calc(0.8rem + env(safe-area-inset-bottom));
+        background: #ffd600;
+        color: #232323;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.2;
+        text-decoration: none;
+        box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .callbar svg {
+        flex: 0 0 auto;
+    }
+
+    .callbar:hover,
+    .callbar:focus {
+        background: #ffe14d;
+        color: #232323;
+    }
+
+    /* Leave room at the end of every page so the bar never covers content. */
+    body {
+        padding-bottom: calc(58px + env(safe-area-inset-bottom));
+    }
+}
