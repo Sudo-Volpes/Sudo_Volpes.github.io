@@ -89,6 +89,9 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffd600;
+    /* Some pages used to paint the hovered link yellow, which made the label
+       disappear into its own background. Keep the pill transparent. */
+    background: transparent;
 }
 
 .social-icons {
